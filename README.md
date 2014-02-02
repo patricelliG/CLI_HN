@@ -1,7 +1,16 @@
 CLI_HN
 ======
 
-A web scraper written in Ruby that pulls the front page of Hacker News to the command line
+# Description
+A web scraper written in Ruby for my programming languages course. This scraper uses Nokogiri to pull the hacker news headlines from first page of news.ycombinator.com. The data is presented to the user via a command line interface. The user may sort the stories as they see fit. 
 
-Written for programming languages class. Please note this is currently a work in progress.
+### Supports Sorting by the Following Fields
+* name
+* source
+* submitter
+* points
+* comments 
+
+
+
 

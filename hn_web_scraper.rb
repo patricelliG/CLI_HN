@@ -18,7 +18,7 @@ end
 # Pull the HTML and create a new nokogiri document
 doc = Nokogiri::HTML(open("https://news.ycombinator.com/"))
 
-# Pull data feilds from the ".title" tag and assign them to story objects
+# Pull data fields from the ".title" tag and assign them to story objects
 name_count = 0 
 source_count = 0 
 doc.css('.title~ .title').each do |title|
