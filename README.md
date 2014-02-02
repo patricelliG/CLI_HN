@@ -18,11 +18,11 @@ Simply call the ruby script to display the stories as in the example below:
 
 If you want to sort the results by one of the fields listed above pass a 's' flag followed by the field name:
 
-**ruby hn_cli.rb -s 'field name'
+**ruby hn_cli.rb -s 'field name'**
 
 So if you wanted to sort by number of comments you input the following:
 
-**ruby hn_cli.rb -s comments
+**ruby hn_cli.rb -s comments**
 
 And thats it!
 
