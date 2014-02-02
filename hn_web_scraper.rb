@@ -3,54 +3,14 @@ require 'nokogiri'
 
 # Make the story class
 class Story
-    # Set description given as the title on HN
-    def name=(name)
-        @name = name
-    end
-    # Set the story's source i.e. NY times
-    def source=(source)
-        @source = source
-    end
-    # Set the number of upvotes received by the story
-    def points=(points)
-        @points = points
-    end
-    # Set the name of the user who submitted the story
-    def submitter=(submitter)
-        @submitter = submitter
-    end
-    # Set the number of comments received by the story
-    def comments=(comments)
-        @comments = comments
-    end
-
-    # Get description given as the title on HN
-    def name
-        @name
-    end
-    # Get the story's source i.e. NY times
-    def source
-        @source
-    end
-    # Get the number of upvotes received by the story
-    def points 
-        @points
-    end
-    # Get the name of the user who submitted the story
-    def submitter
-        @submitter
-    end
-    # Get the number of comments received by the story
-    def comments
-        @comments
-    end
+    attr_accessor :name, :source, :points, :submitter, :comments
 end
 
 # Initialize the array of stories
 num_stories = 30
 stories = Array.new 
 count = 0
-until count == num_stories + 1  do
+until count == num_stories do
     stories << Story.new
     count += 1
 end
@@ -61,7 +21,7 @@ doc = Nokogiri::HTML(open("https://news.ycombinator.com/"))
 # Pull data feilds from the ".title" tag and assign them to story objects
 name_count = 0 
 source_count = 0 
-doc.css('.title').each do |title|
+doc.css('.title~ .title').each do |title|
     if title.at_css('a').class == Nokogiri::XML::Element
         stories[name_count].name = title.at_css('a').text # Story name
         name_count += 1
@@ -91,6 +51,7 @@ doc.css('.subtext').each do |subtext|
     end
 end
 
+stories.sort_by! &:name
 stories.each do |story| 
    puts
    puts "   #{story.name}   #{story.source}"
