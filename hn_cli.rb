@@ -87,3 +87,5 @@ stories.each do |story|
    puts "       < #{story.points} | #{story.submitter} | #{story.comments} > "
 end
 
+# Give credit where credit is due...
+puts "\nAll content provided by \'https://news.ycombinator.com\'."
