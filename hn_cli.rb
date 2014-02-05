@@ -1,3 +1,8 @@
+# Written by Gary Patricelli
+# On or about 02/03/2014
+# For CSC 435
+# All content provided by https://news.ycombinator.com
+
 require 'open-uri'
 require 'nokogiri'
 
