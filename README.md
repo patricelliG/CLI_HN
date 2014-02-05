@@ -11,7 +11,7 @@ A web scraper written in Ruby for my programming languages course. This scraper 
 * points
 * comments 
 
-### User Instruction
+### User Instructionions
 Simply call the ruby script to display the stories as in the example below:
 
 **ruby hn_cli.rb**
@@ -27,8 +27,7 @@ So if you wanted to sort by number of comments you input the following:
 And thats it!
 
 ### TO DO
-* Fix glitch in sorting by comments and points
-* Launch the story from the command line
+* Launch the story from the command line?
 
 
 
