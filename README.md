@@ -11,6 +11,13 @@ A web scraper written in Ruby for my programming languages course. This scraper 
 * points
 * comments 
 
+### Dependencies 
+This program requires 'nokogiri'. Nokogiri can be installed very easily using RubyGems. Simply type the following:
+
+**$ gem install nokogiri**
+
+RubyGems will download and install nokogiri for you.
+
 ### User Instructions
 Simply call the ruby script to display the stories as in the example below:
 
